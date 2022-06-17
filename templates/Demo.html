@@ -11,7 +11,7 @@
     <script type="text/javascript" src="../static/js/actions.js"></script>
     <script type="text/javascript" src="../static/js/jquery-2.2.4.min.js"></script>
     <div class="box">
-      <form action="">
+      <form>
         <fieldset>
           <legend style="background-color: gray; color: white; font-size: 30px">demo展示</legend>
           <center>
@@ -26,5 +26,15 @@
         </fieldset>
       </form>
     </div>
+    <script>
+      $('#textBox').keypress(function (e) {
+        if (e.which == 13) {
+          e.preventDefault()
+          getTriple()
+          /* AJAX code to post data to action */
+          /* add Div based on response from AJAX call */
+        }
+      })
+    </script>
   </body>
 </html>
